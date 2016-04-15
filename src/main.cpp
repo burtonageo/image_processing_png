@@ -27,7 +27,7 @@ int main(int argc, const char* const* argv) {
 
     auto png = png::parse_file(std::move(file));
 
-    if (png.error != png::NoError) {
+    if (png.err != png::NoError) {
         printf("Error parsing file %s\n", filename);
         return EXIT_FAILURE;
     }
